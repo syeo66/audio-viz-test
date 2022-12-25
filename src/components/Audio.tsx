@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
+// TODO Now that it works, refactor it to make it clean
 const AudioComponent: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false)
 
