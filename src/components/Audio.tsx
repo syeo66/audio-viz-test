@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+
 import spectrum from '../renderers/spectrum'
 
 const AudioComponent: React.FC = () => {
@@ -25,10 +26,12 @@ const AudioComponent: React.FC = () => {
   }, [])
 
   useEffect(() => {
+    const copyAudio = audioRef.current
+
     return () => {
       stopRef.current?.()
       stopRef.current = null
-      audioRef.current?.pause()
+      copyAudio?.pause()
     }
   }, [])
 
