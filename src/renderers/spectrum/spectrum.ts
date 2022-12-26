@@ -3,7 +3,7 @@ interface SpectrumInput {
   canvas: HTMLCanvasElement
 }
 
-var nodes = new WeakMap<HTMLAudioElement, MediaElementAudioSourceNode>()
+const nodes = new WeakMap<HTMLAudioElement, MediaElementAudioSourceNode>()
 let audioCtx: AudioContext | null = null
 
 const getSource = (audio: HTMLAudioElement) => {

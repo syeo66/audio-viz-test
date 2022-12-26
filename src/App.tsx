@@ -2,7 +2,7 @@ import './App.css'
 
 import Audio from './components/Audio'
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Audio />
